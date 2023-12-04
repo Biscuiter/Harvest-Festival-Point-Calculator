@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+</head>
+<body>
+    <h1>My Simple Webpage</h1>
+
+    <!-- Your columns and input fields go here -->
+    <label for="column1">Column 1:</label>
+    <input type="number" id="column1" />
+
+    <label for="column2">Column 2:</label>
+    <input type="number" id="column2" />
+
+    <button onclick="calculate()">Calculate</button>
+
+    <!-- Display calculated output here -->
+    <p id="output">Result: </p>
+
+    <!-- Your JavaScript for calculations -->
+    <script>
+        function calculate() {
+            // Get values from input fields
+            var value1 = parseFloat(document.getElementById("column1").value);
+            var value2 = parseFloat(document.getElementById("column2").value);
+
+            // Perform your calculations
+            var result = value1 + value2;
+
+            // Display the result
+            document.getElementById("output").innerText = "Result: " + result;
+        }
+    </script>
+</body>
+</html>
